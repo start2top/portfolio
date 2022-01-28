@@ -1,0 +1,77 @@
+.skills {
+    margin-top: 120px;
+        &::before{
+            position: relative;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .skills__divider {
+        width: 60px;
+        height: 0px;
+        margin-bottom: 60px;
+        background-color: $main-color;
+        border: 3px solid $main-color;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    .skills__panel {
+        display: grid;
+        gap: 13px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        &-elem {
+            border: 1px solid #000;
+            padding: 30px 29px 25px 30px;
+            &-desc {
+                margin-top: 15px;
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 15px;
+            }
+        }
+    }
+    .skills__percentage_calc {
+        margin-top: 120px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 70px);
+        column-gap: 45px;
+        row-gap: 30px;
+        &__elem {
+            display: grid;
+            justify-content: space-between;
+            &__name {
+                display: grid;
+                font-size: 14px;
+                font-weight: 700;
+                .text {
+                    position: relative;
+                    @include before_circle;
+                    z-index: 2;
+                    &::before {
+                        transform: translateX(-50%);
+                    }
+                }
+                .percentage {
+                    justify-self: end;
+                }
+            }
+            &__bar {
+                width: 350px;
+                height: 14px;
+                background: #E8E4DE;
+                border-radius: 4px;
+                z-index: -1;
+                span {
+                    display: block;
+                    background-color: $main-color;
+                    border-radius: 4px;
+                    height: 14px;
+                    width: 50%;
+                    z-index: 1;
+                }
+            }
+
+        }
+}

@@ -1,0 +1,31 @@
+.title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 60px;
+    &_fz14{
+        font-size: 14px;
+        line-height: 21px;
+    }
+    &_fz16 {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 700;
+    }
+    &_fz48 {
+        font-size: 48px;
+    }
+    &__section-title {
+        position: relative;
+        text-align: center;
+    }
+    &__section-subtitle {
+        text-align: center;
+            @include before_circle;
+            position: relative;
+            z-index: 1;
+            &:before {
+                margin-left: 50%;
+                transform: translateX(-50%);
+            }
+    }
+}
