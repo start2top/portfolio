@@ -57,7 +57,7 @@
     &__form {
         margin-top: 30px;
         display: grid;
-        grid-template: 45px 190px 45px / repeat(2, 280px);
+        grid-template: 45px 45px 190px / repeat(2, 280px);
         row-gap: 25px;
         column-gap: 30px;
         label {
@@ -88,6 +88,8 @@
         color: #000000;
         input {
             margin-right: 10px;
+            width: 15px;
+            height: 15px;
         }
     }
     &__input {

@@ -101,12 +101,12 @@
             <div class="title__fz16 promo__subtitle">Меня зовут Владислав Рахманин</div>
             <div class="title title_fz48 promo__title">Я начинающий web-разработчик <br>из города Оренбург</div>
             <div class="promo__btns">
-                <a href="#" class="promo__link btn">Портфолио</a>
-                <a href="#" class="promo__link">Про меня</a>
+                <a href="#portfolio" class="promo__link btn">Портфолио</a>
+                <a href="#about" class="promo__link">Про меня</a>
             </div>
         </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
         <div class="container about__container">
             <div class="about__wrapper">
                 <div class="about__main-photo">
@@ -252,7 +252,7 @@
             </div>
         </div>
     </section>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="container">
             <div class="title title_fz16 title__section-subtitle">Портфолио</div>
             <div class="title title_fz36 title__section-title">Мои работы</div>
@@ -261,7 +261,7 @@
             <div class="portfolio__projects">
                 <a target="_blank" class="portfolio__projects__item" href="./uber/"><img src="./img/works/uber.jpg" alt="uber"></a>
                 <a target="_blank" class="portfolio__projects__item" href="./pulse/"><img src="./img/works/pulse.jpg" alt="watchstore"></a>
-                <a target="_blank" class="portfolio__projects__item" href="./irvas/dist"><img src="./img/works/irvas.jpg" alt="Windows-Store"></a>
+                <a target="_blank" class="portfolio__projects__item" href="./irvas/"><img src="./img/works/irvas.jpg" alt="Windows-Store"></a>
                 <!-- <a target="_blank" class="portfolio__projects__item vertical" href="#"><img src="./img/works/plans.jpg" alt="#"></a> -->
                 <a target="_blank" class="portfolio__projects__item" href="./art/"><img src="./img/works/art.jpg" alt="art"></a>
                 <a target="_blank" class="portfolio__projects__item horizontal" href="https://www.digitalstoday.ru/"><img src="./img/works/digitalstoday.jpg" alt="digitalstoday"></a>
@@ -337,7 +337,11 @@
                         Или оставьте ваши данные и я сам вам напишу:
                     </div>
 
-                    <form action="#" class="contacts__form">
+                    <form action="telegram.php" class="contacts__form" method="POST">
+                        <div class="contacts__input">
+                            <input required name="phone" id="phone" type="phone">
+                            <label for="phone">Ваш номер</label>
+                        </div>
                         <div class="contacts__input">
                             <input required name="name" id="name" type="text">
                             <label for="name">Ваше имя</label>
@@ -348,13 +352,14 @@
                         </div>
 
                         <div class="contacts__textarea">
-                            <textarea name="text" id="text"></textarea>
+                            <textarea name="message" id="text"></textarea>
                             <label for="text">Ваше сообщение</label>
                         </div>
                         <div class="contacts__triggers">
                             <button class="contacts__btn btn">Отправить сообщение</button>
                             <div class="contacts__policy policy">
-                                <input required type="checkbox">
+                                <input required type="checkbox" id="privacy_policy" name="privacy_policy">
+                                <label for="checkbox"></label>
                                 <span>Я согласен(а) с <a href="https://tilda.cc/ru/privacy-generator/">политикой конфиденциальности</a></span>
                             </div>
                         </div>
