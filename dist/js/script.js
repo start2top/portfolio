@@ -3,7 +3,8 @@ window.addEventListener('DOMContentLoaded', function() {
         menu      =     document.querySelector('.menu'),
         menuClose =     document.querySelector('.menu__close'),
         overlayClose =  document.querySelector('.menu__overlay'),
-        body = document.querySelector('body');
+        body = document.querySelector('body'),
+        formSendBtn = document.querySelector('.contacts__btn');
 
 
         hamburger.addEventListener('click', function() {
@@ -65,5 +66,9 @@ window.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    // formSendBtn.addEventListener('click', function(event) {
+    //     event.preventDefault();
+        
+    // });
             
 });
